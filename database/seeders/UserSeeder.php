@@ -32,8 +32,6 @@ class UserSeeder extends Seeder
         $formateur->givePermissionTo($leaderPermissions);
 
 
-        
-
         $user = User::create([
                 'name' => 'stagiaire',
                 'email' => 'stagiaire1234@solicode.com',
