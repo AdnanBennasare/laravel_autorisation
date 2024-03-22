@@ -9,7 +9,7 @@ use App\Repositories\ProjectRepository;
 use App\Http\Requests\FormTaskRequest;
 
 
-class TaskController extends Controller
+class TaskController extends AppbaseController
 {
     private $TaskRepository;
     private $ProjectRepository;

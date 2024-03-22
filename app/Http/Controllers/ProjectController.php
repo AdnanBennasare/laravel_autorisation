@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Repositories\ProjectRepository;
 use App\Http\Requests\FormTaskRequest;
 
-class ProjectController extends Controller
+class ProjectController extends AppbaseController
 {
     protected $projectRepository;
 
