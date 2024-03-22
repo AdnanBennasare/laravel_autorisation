@@ -23,6 +23,7 @@ class UserSeeder extends Seeder
        $formateur =  User::create([
             'name' => 'formateur1234',
             'email' => 'formateur@solicode.com',
+            'phone' => '0634525252',
             'password' => Hash::make('formateur1234'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
@@ -36,6 +37,7 @@ class UserSeeder extends Seeder
         $user = User::create([
                 'name' => 'stagiaire',
                 'email' => 'stagiaire1234@solicode.com',
+                'phone' => '0634522152',
                 'password' => Hash::make('stagiaire1234'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
