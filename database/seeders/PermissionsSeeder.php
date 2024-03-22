@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Permission;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class PermissionsSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class PermissionsSeeder extends Seeder
   
         public function run(): void
         {
-            $controllers = ['Competences', 'Modules', 'Stagiaires'];
+            $controllers = ['Project', 'Task'];
     
             foreach ($controllers as $controller) {
                 $this->createPermissionsForController($controller);
@@ -22,7 +23,7 @@ class PermissionsSeeder extends Seeder
     
         private function createPermissionsForController($controller)
         {
-            $actions = ['create', 'store', 'show', 'edit', 'update', 'destroy', 'index', 'export', 'import'];
+            $actions = ['create', 'store', 'show', 'edit', 'update', 'destroy', 'index'];
         
             foreach ($actions as $action) {
                 $permissionName = $action . '-' . $controller . 'Controller';
